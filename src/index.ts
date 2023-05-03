@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { run } from "./chains/question_answer_docs";
+import { getWakandaAIResponse } from "./chains/question_answer_docs";
 
 const app = express();
 app.use(cors());
@@ -17,7 +17,7 @@ app.get("/api/wakanda-ai", async (req, res) => {
   }
 
   try {
-    const response = await run(character, question);
+    const response = await getWakandaAIResponse(character, question);
     res.send(response);
   } catch (error) {
     console.error(error);

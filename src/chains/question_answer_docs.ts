@@ -3,7 +3,10 @@ import { callVectorDBQAChain } from "../lib/vectorstoreutils";
 
 const pinecone = new PineconeClient();
 
-export const run = async (character: string, question: string) => {
+export const getWakandaAIResponse = async (
+  character: string,
+  question: string
+) => {
   try {
     //initialize the vectorstore to store embeddings
     await pinecone.init({
