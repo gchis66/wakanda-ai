@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("https://wakandai.onrender.com/api/wakanda-ai", async (req, res) => {
+app.get("/api/wakanda-ai", async (req, res) => {
   const character = req.query.character as string;
   const question = req.query.question as string;
 
