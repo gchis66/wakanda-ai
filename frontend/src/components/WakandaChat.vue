@@ -55,7 +55,7 @@ export default {
     const selectedCharacter = ref("");
     const userQuestion = ref("");
     const response = ref("");
-    const backendURL = "https://wakandai.onrender.com";
+    const backendURL = "http://localhost:3001";
     const loading = ref(false);
 
     const getCharacterImage = (characterName) => {
